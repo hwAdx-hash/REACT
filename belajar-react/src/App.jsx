@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Hm } from './hm';
 import React from 'react';
+import Button from './components/Elements/Button';
 
 // class Button extends React.Component {
 //   render() {
@@ -32,17 +33,6 @@ import React from 'react';
 const Link = ({ href, children }) => {
   return(
     <a href={href} className='text-blue-500 hover:underline'>{children}</a>
-  );
-}
-
-const Button = ({ children, variant = "bg-[#FF4217]" }) => {
-  return(
-    <button
-      className={`h-10 px -6 font-semibold rounded-full ${variant} text-white`}
-      type='submit'
-    >
-      {children}
-    </button>
   );
 }
 
