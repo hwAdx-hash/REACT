@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { Hm } from './hm';
-import React from 'react';
-import Button from './components/Elements/Button';
+import Button from './components/Elements/Button/index';
+import Input from './components/Elements/Input/Input';
+import Label from './components/Elements/Input/Label';
 
 // class Button extends React.Component {
 //   render() {
@@ -39,9 +36,19 @@ const Link = ({ href, children }) => {
 function App() {
   return(
     <div className='flex justify-center bg-black min-h-screen items-center'>
-      <div className='flex gap-x-2'>
-        <Button variant=" bg-[#FF4217] hover:bg-[#FF4217]/90">View All</Button>
-        <Button variant=" bg-red-600 hover:bg-red-600/90"><Link href="https://www.google.com">Google</Link></Button>
+      <div className=" w-full max-w-xs">
+        <h1 className=' text-white text-center font-semibold text-xl font-mono mb-3'>Login</h1>
+        <form action="">
+          <div className="mb-4">
+            <Label htmlFor="email">Email</Label>
+            <Input type="email" id="email" placeholder='Masukan email anda' />
+          </div>
+          <div className="mb-4">
+            <Label htmlFor="password">Password</Label>
+            <Input type="password" id="password" placeholder='Masukan password anda' />
+          </div>
+          <Button classname="bg-[#FF4217] hover:bg-[#FF4217]/90 w-full mt-2">Login</Button>
+        </form>
       </div>
     </div>
   );
