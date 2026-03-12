@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 
 const LoginPages = () => {
     return (
-        <AuthLayouts title="Login">
+        <AuthLayouts title="Login" type="login">
             <FormLogin />
-            <p className="text-white font-mono mt-6 text-sm text-center">Don't have account? <Link to="/register" className="text-blue-500 hover:underline">Sign Up</Link></p>
         </AuthLayouts>
     );
 }
